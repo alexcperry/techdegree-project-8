@@ -3,13 +3,16 @@ body {
   position: relative;
 }
 
-.overlay {
+#overlay {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: white;
+}
+
+.hidden {
   display: none;
 }
 
@@ -26,23 +29,23 @@ body {
   grid-row-gap: 40px;
 }
 
-.user {
+.employee-grid {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   border: 2px solid lightgrey;
   border-radius: 10px;
-} .user:hover {
+} .employee-grid:hover {
   cursor: pointer;
 }
 
-.user:hover img,
-.user:hover h3,
-.user:hover p{
+.employee-grid:hover img,
+.employee-grid:hover h3,
+.employee-grid:hover p{
   opacity: 0.5;
 }
 
-.user img {
+.employee-grid img {
   border-radius: 50%;
 }
