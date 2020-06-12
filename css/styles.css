@@ -103,13 +103,14 @@ body {
   margin: 5px 0;
 }
 
-hr {
-  height: 1px;
-  width: 80%;
-  color: #1235aa;
-  border: none;
 
+hr {
+  border: 0;
+  width: 80%;               
+  background-color:#ccc;
+  height: 1px;
 }
+
 
 .employee-extra-info {
   display: flex;
