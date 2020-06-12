@@ -76,6 +76,7 @@ const createModalPopUp = (employee, overlay) => {
   modalDiv.className = "employee-modal";
 
   modalDiv.innerHTML = `
+  <button class="end-modal-btn"><p>X</p></button>
   <img src="${employee.photo}" alt="A headshot of ${employee.name}" class="employee-photo"">
   <div class="employee-basic-info">
   <h3>${employee.name}</h3>
@@ -129,8 +130,8 @@ const createEmployeeElements = (employee, index, grid, overlay) => {
   const city = employee.location.city;
   const phone = employee.cell;
   const streetAdress = employee.location.street.number + " " +
-    employee.location.street.name + ", " + getStateCode(employee.location.state + " " +
-      employee.location.postcode);
+    employee.location.street.name + ", " + getStateCode(employee.location.state)
+    + " " + employee.location.postcode;
   const birthday = `Birthday: ${birthdateToBDay(employee.dob.date)}`;
 
   //Make employee object
@@ -142,7 +143,7 @@ const createEmployeeElements = (employee, index, grid, overlay) => {
 }
 
 
-fetch(`https://randomuser.me/api/?nat=us&results=12`)
+fetch(`https://randomuser.me/api/?nat=us&results=${numEmployees}`)
   .then(response => response.json())
   .then(data => data.results)
   .then(results => results.forEach((employee, index) => createEmployeeElements(employee, index, gridDiv, overlay)));
