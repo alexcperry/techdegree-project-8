@@ -76,13 +76,13 @@ const createModalPopUp = (employee, overlay) => {
   modalDiv.className = "employee-modal";
 
   modalDiv.innerHTML = `
-  <img src="${employee.photo}" alt="A headshot of ${employee.name}">
+  <img src="${employee.photo}" alt="A headshot of ${employee.name}" class="employee-photo"">
   <div class="employee-basic-info">
   <h3>${employee.name}</h3>
   <p>${employee.email}</p>
   <p>${employee.city}</p>
   </div>
-  <br>
+  <hr>
   <div class="employee-extra-info">
   <p>${employee.phone}</p>
   <p>${employee.address}</p>
@@ -97,6 +97,7 @@ const createModalPopUp = (employee, overlay) => {
 const giveEmployeeDivListener = (employee, employeeDiv, overlay) => {
   employeeDiv.addEventListener('click', () => {
     overlay.className = '';
+    overlay.style.display = 'flex';
     createModalPopUp(employee, overlay);
   })
 }
@@ -107,7 +108,7 @@ const addEmployeeToGrid = (employee, grid, overlay) => {
   employeeDiv.className = "employee-grid";
 
   employeeDiv.innerHTML = `
-  <img src="${employee.photo}" alt="A headshot of ${employee.name}">
+  <img src="${employee.photo}" alt="A headshot of ${employee.name}" class="employee-photo">
   <div class="employee-info">
   <h3>${employee.name}</h3>
   <p>${employee.email}</p>
