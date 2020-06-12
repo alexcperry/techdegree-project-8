@@ -118,6 +118,18 @@ hr {
   align-items: center;
 }
 
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  border: none;
+  background-color: inherit;
+
+} .scroll-btn[direction='left'] {
+ left: 10px;
+} .scroll-btn[direction='right'] {
+  right: 10px;
+}
+
 
 /* General Styles*/
 

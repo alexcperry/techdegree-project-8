@@ -132,6 +132,7 @@ const createScrollButton = (direction, currIndex, modalDiv, employees) => {
   modalScrollBtn.className = `scroll-btn`;
   modalScrollBtn.currIndex = currIndex;
   modalScrollBtn.innerText = (direction === "left") ? "<" : ">";
+  modalScrollBtn.setAttribute('direction', direction);
 
   //Give button functionality
   modalScrollBtn.addEventListener('click', () => {
