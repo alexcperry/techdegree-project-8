@@ -72,9 +72,22 @@ const birthdateToBDay = birthdate => {
 
 //SOMETHING ELSE
 const createModalPopUp = (employee, overlay) => {
+  //Create modal div
   const modalDiv = document.createElement('div');
   modalDiv.className = "employee-modal";
 
+  //Create close button
+  const modalCloseBtn = document.createElement('button');
+  modalCloseBtn.className = 'end-modal-btn';
+  modalCloseBtn.innerHTML = '<p>X</p>';
+  modalCloseBtn.addEventListener('click', () => {
+    let modalWindows = document.querySelectorAll('.employee-modal');
+    modalWindows.forEach(modalWindow => overlay.removeChild(modalWindow));
+    overlay.className = 'hidden';
+    overlay.style.display = 'none';
+  })
+
+  //Inner HTML
   modalDiv.innerHTML = `
   <button class="end-modal-btn"><p>X</p></button>
   <img src="${employee.photo}" alt="A headshot of ${employee.name}" class="employee-photo"">
@@ -91,7 +104,12 @@ const createModalPopUp = (employee, overlay) => {
   </div>
   `;
 
+  //Add div to DOM
   overlay.appendChild(modalDiv);
+
+  //Add button to div
+  const photo = document.querySelector('.employee-modal img');
+  modalDiv.insertBefore(modalCloseBtn, photo);
 }
 
 
