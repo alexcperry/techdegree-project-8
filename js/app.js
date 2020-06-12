@@ -2,6 +2,14 @@
 const numUsers = 12;
 const gridDiv = document.getElementById('grid');
 
+// const createModalWindow = (userDiv, overlay) => {
+
+// }
+
+// const addUserClickListener = userDiv => {
+//   userDiv.addEventListener('click',)
+// }
+
 const makeUserDiv = (user, grid) => {
   const userDiv = document.createElement('div');
   userDiv.className = "user";
