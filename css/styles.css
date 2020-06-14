@@ -36,6 +36,13 @@ body {
   grid-row-gap: 40px;
 }
 
+/* Header Styles */
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Grid Item Styles */
 
 .employee-grid {

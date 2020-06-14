@@ -253,6 +253,7 @@ const createEmployeeElements = (employee, index, grid, overlay) => {
   //Append employee object to list of employees
   employees.push(newEmployee);
   //Make Div for grid
+  console.log('adding to grid');
   addEmployeeToGrid(newEmployee, grid, overlay);
 }
 
@@ -260,5 +261,6 @@ const createEmployeeElements = (employee, index, grid, overlay) => {
 fetch(`https://randomuser.me/api/?nat=us&results=${numEmployees}`)
   .then(response => response.json())
   .then(data => data.results)
-  .then(results => results.forEach((employee, index) => createEmployeeElements(employee, index, gridDiv, overlay)));
+  .then(results => results.forEach((employee, index) => createEmployeeElements(employee, index, gridDiv, overlay)))
+  .then(() => setupSearch());
 
