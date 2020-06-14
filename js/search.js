@@ -9,10 +9,8 @@ const setupSearch = () => {
       const employeeName = employeeDiv.querySelector('.employee-info h3').innerText.toLowerCase();
 
       if (!employeeName.includes(searchTerm)) {
-        console.log("bad result");
         employeeDiv.style.display = "none";
       } else {
-        console.log("good result");
         employeeDiv.style.display = "flex";
       }
 
