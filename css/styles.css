@@ -41,6 +41,15 @@ body {
 .heading {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar {
+  height: 50%;
+  border: solid 1px grey;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 10px;
 }
 
 /* Grid Item Styles */
